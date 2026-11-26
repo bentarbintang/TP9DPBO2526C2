@@ -1,8 +1,9 @@
 # TP9 DPBO — MVP (Model-View-Presenter) Strict Passive View
 **Rekrutmen / HR:** modul **Kandidat** (starter, dilengkapi) + modul **Lowongan** (baru)
 
-> Repository: `TP9DPBO2526C2` · Mata kuliah: Desain dan Pemrograman Berbasis Objek (DPBO)
-> Nama / NIM / Kelas: _(isi sendiri)_
+## Janji
+Saya Bentar Bintang Umeir dengan nim 2509865 mengerjakan TP9 dalam mata kuliah DPBO untuk 
+keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
 
 Aplikasi web PHP Native + MySQL (PDO) untuk mengelola data **kandidat karyawan** dan **lowongan pekerjaan** dengan arsitektur **Model-View-Presenter (MVP) Strict Passive View**.
 
@@ -206,7 +207,8 @@ grep -nE "foreach|count\(|require_once|include" project/views/*.php
 
 ## 7. Dokumentasi (Screenrecord)
 
-Letakkan rekaman program berjalan di folder `dokumentasi/`, lalu tautkan di sini, misalnya:
+### CRUD Tabel Kandidat
 
+### CRUD Tabel Lowongan
 - `dokumentasi/demo-kandidat.mp4` — daftar, tambah, ubah, hapus kandidat
 - `dokumentasi/demo-lowongan.mp4` — pindah tab, tambah, ubah, hapus lowongan, serta contoh validasi error
