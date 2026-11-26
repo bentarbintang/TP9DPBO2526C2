@@ -208,7 +208,12 @@ grep -nE "foreach|count\(|require_once|include" project/views/*.php
 ## 7. Dokumentasi (Screenrecord)
 
 ### CRUD Tabel Kandidat
+#### Tambah Kandidat
+<video src="https://github.com/user-attachments/assets/77f36d2f-5dfb-43ff-86d5-c7007cd69fde" width="600" controls autoplay loop muted> </video>
+#### Update Kandidat
+#### Delete Kandidat
 
 ### CRUD Tabel Lowongan
-- `dokumentasi/demo-kandidat.mp4` — daftar, tambah, ubah, hapus kandidat
-- `dokumentasi/demo-lowongan.mp4` — pindah tab, tambah, ubah, hapus lowongan, serta contoh validasi error
+#### Tambah Lowongan
+#### Update Lowongan
+#### Delete Lowongan
