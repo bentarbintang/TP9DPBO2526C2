@@ -210,16 +210,27 @@ grep -nE "foreach|count\(|require_once|include" project/views/*.php
 ### CRUD Tabel Kandidat
 #### Tambah Kandidat
 
-<p align="center">
-  <a href ="https://github.com/user-attachments/assets/fdea7326-7685-4a25-a990-49a353b8e690 ">
-    <img src="dokumentasi/Tambah_kandidat.png" alt="Tambah Kandidat" width="520" />
-  </a>
-</p>
+https://github.com/user-attachments/assets/948ab2dc-8d9c-4bef-b8c8-380a8bbd5898
 
 #### Update Kandidat
+
+https://github.com/user-attachments/assets/df7b6eb8-a83b-4bde-bd13-5eeb3a844b38
+
 #### Delete Kandidat
+
+https://github.com/user-attachments/assets/c4659aa6-96ed-43e0-9b90-c11a717cfaa8
+
 
 ### CRUD Tabel Lowongan
 #### Tambah Lowongan
+
+https://github.com/user-attachments/assets/aaa02d91-df77-4013-891f-735e0c279b32
+
 #### Update Lowongan
+
+https://github.com/user-attachments/assets/1584ef4c-edaf-4200-ba4e-7780221047f3
+
 #### Delete Lowongan
+
+https://github.com/user-attachments/assets/b88702e4-f560-44c1-b78a-19c41112af12
+
