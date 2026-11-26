@@ -210,7 +210,11 @@ grep -nE "foreach|count\(|require_once|include" project/views/*.php
 ### CRUD Tabel Kandidat
 #### Tambah Kandidat
 
-https://github.com/user-attachments/assets/77f36d2f-5dfb-43ff-86d5-c7007cd69fde width="600"
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=ID_VIDEO" target="_blank">
+    <img src="dokumentasi/Tambah_kandidat.png" alt="Tambah Kandidat" width="520" />
+  </a>
+</p>
 
 #### Update Kandidat
 #### Delete Kandidat
