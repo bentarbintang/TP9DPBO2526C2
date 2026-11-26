@@ -211,7 +211,7 @@ grep -nE "foreach|count\(|require_once|include" project/views/*.php
 #### Tambah Kandidat
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=ID_VIDEO" target="_blank">
+  <a href ="https://github.com/user-attachments/assets/fdea7326-7685-4a25-a990-49a353b8e690 ">
     <img src="dokumentasi/Tambah_kandidat.png" alt="Tambah Kandidat" width="520" />
   </a>
 </p>
