@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Form Lowongan Pekerjaan</title>
+  <!-- Gaya halaman (CSS di dalam file agar template mandiri). -->
+  <style>
+    /* Variabel warna, radius, dan font yang dipakai di seluruh halaman. */
+    :root{
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --border: #e6e9ef;
+      --radius: 8px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);color:#0f172a;}
+    /* Pembungkus halaman (lebar maksimum, rata tengah) dan kartu putih. */
+    .container{max-width:650px;margin:36px auto;padding:18px;}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow: 0 1px 3px rgba(16,24,40,0.04);}
+    h1{margin:0 0 16px;font-size:20px;color:#0f172a;}
+    /* Gaya form dua kolom (kelas full = selebar baris). */
+    form{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;font-weight:500;}
+    input[type="text"], input[type="number"], select{width:100%;padding:9px 12px;border:1px solid var(--border);border-radius:6px;font-size:14px;box-sizing:border-box;}
+    .full{grid-column:1/-1;}
+    .actions{display:flex;gap:10px;justify-content:flex-end;margin-top:10px;}
+    /* Gaya tombol Simpan dan Batal. */
+    .btn{padding:9px 16px;border-radius:6px;border:1px solid transparent;font-size:14px;cursor:pointer;text-decoration:none;}
+    .btn-primary{background:var(--accent);color:#fff;font-weight:600;}
+    .btn-muted{background:transparent;border:1px solid var(--border);color:var(--muted);}
+    /* Gaya tab navigasi antarmodul (Data Kandidat / Data Lowongan). */
+    .tabs{display:flex;gap:6px;margin-bottom:16px;border-bottom:1px solid var(--border);}
+    .tab{padding:9px 16px;font-size:14px;font-weight:600;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-1px;}
+    .tab:hover{color:#0f172a;}
+    .tab.active{color:var(--accent);border-bottom-color:var(--accent);}
+    /* Gaya kotak pesan: hijau untuk sukses, merah untuk error. */
+    .alert{padding:10px 14px;border-radius:6px;font-size:13px;margin-bottom:14px;border:1px solid transparent;}
+    .alert-success{background:#ecfdf5;color:#065f46;border-color:#a7f3d0;}
+    .alert-error{background:#fef2f2;color:#991b1b;border-color:#fecaca;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <!-- Tab navigasi: pindah antara modul Kandidat dan modul Lowongan (tab aktif diberi kelas active). -->
+      <nav class="tabs">
+        <a href="index.php?module=kandidat" class="tab">Data Kandidat</a>
+        <a href="index.php?module=lowongan" class="tab active">Data Lowongan</a>
+      </nav>
+
+      <!-- Tempat pesan sukses/error (HTML dirakit Presenter, diisi View). -->
+      {{ALERT}}
+
+      <h1>{{FORM_TITLE}}</h1>
+
+      <!-- Form kirim data ke index.php dengan metode POST (aksi tambah/ubah). -->
+      <form method="post" action="index.php">
+        <!-- Penanda modul agar index.php meneruskan POST ke modul Lowongan. -->
+        <input type="hidden" name="module" value="lowongan">
+        <!-- Jenis aksi (tambah/ubah) yang diisi View; dibaca index.php. -->
+        <input type="hidden" name="action" value="{{ACTION}}">
+        <!-- ID data yang diubah (kosong saat menambah). -->
+        <input type="hidden" name="id" value="{{ID}}">
+
+        <div class="full">
+          <!-- Kolom isian data lowongan (nilai awal diisi View saat mode ubah). -->
+          <label for="judul_posisi">Judul Posisi</label>
+          <input id="judul_posisi" name="judul_posisi" type="text" maxlength="100" placeholder="Misal: Backend Developer" value="{{JUDUL_POSISI}}" required>
+        </div>
+
+        <div>
+          <label for="departemen">Departemen</label>
+          <input id="departemen" name="departemen" type="text" maxlength="100" placeholder="Misal: Engineering" value="{{DEPARTEMEN}}" required>
+        </div>
+
+        <div>
+          <label for="lokasi">Lokasi</label>
+          <input id="lokasi" name="lokasi" type="text" maxlength="100" placeholder="Misal: Bandung" value="{{LOKASI}}" required>
+        </div>
+
+        <div>
+          <label for="kuota">Kuota (orang)</label>
+          <input id="kuota" name="kuota" type="number" min="1" max="1000" step="1" value="{{KUOTA}}" required>
+        </div>
+
+        <div>
+          <label for="status">Status</label>
+          <!-- Pilihan status: daftar option dirakit Presenter (option terpilih sudah ditandai). -->
+          <select id="status" name="status">
+            {{STATUS_OPTIONS}}
+          </select>
+        </div>
+
+        <!-- Tombol Batal (kembali ke daftar) dan Simpan (submit). -->
+        <div class="full actions">
+          <a href="index.php?module=lowongan" class="btn btn-muted">Batal</a>
+          <button type="submit" class="btn btn-primary">Simpan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
