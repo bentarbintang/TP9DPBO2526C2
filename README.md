@@ -209,7 +209,11 @@ grep -nE "foreach|count\(|require_once|include" project/views/*.php
 
 ### CRUD Tabel Kandidat
 #### Tambah Kandidat
+
 <video src="https://github.com/user-attachments/assets/77f36d2f-5dfb-43ff-86d5-c7007cd69fde" width="600" controls autoplay loop muted> </video>
+
+https://github.com/user-attachments/assets/77f36d2f-5dfb-43ff-86d5-c7007cd69fde
+
 #### Update Kandidat
 #### Delete Kandidat
 
