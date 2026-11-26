@@ -187,25 +187,13 @@ sequenceDiagram
 
 ---
 
-## 6. Checklist Kesesuaian Tugas
-
-- [x] `TabelKandidat`: `getAllKandidat()`, `getKandidatById()`, `addKandidat()`, `updateKandidat()`, `deleteKandidat()` (prepared statement)
-- [x] `PresenterKandidat`: `__construct()`, `tampilkanKandidat()`, `tampilkanFormKandidat()`, `tambahKandidat()`, `ubahKandidat()`, `hapusKandidat()`
-- [x] `index.php` menangani `POST` `tambah` / `ubah` / `hapus` + routing daftar & form
-- [x] Tabel & modul MVP baru `lowongan` (Entity, Kontrak Model/View/Presenter, Tabel, View, Presenter, template) dengan CRUD lengkap
-- [x] View pasif: tidak ada `foreach`, `count()`, atau `require_once` Model/Entity di `views/` (View hanya me-`require` kontrak View-nya sendiri)
-- [x] Semua komunikasi lewat interface (`KontrakModel*`, `KontrakView*`, `KontrakPresenter*`)
-- [x] `mvp_db.sql` mencakup `kandidat` dan `lowongan` beserta dummy data
-
-Pemeriksaan cepat aturan View (hasil harus hanya dua baris `require_once` kontrak sendiri):
-
-```bash
-grep -nE "foreach|count\(|require_once|include" project/views/*.php
-```
-
 ---
 
-## 7. Dokumentasi (Screenrecord)
+## 6. Dokumentasi (Screenrecord)
+
+### Tabel 
+<img width="383" height="59" alt="image" src="https://github.com/user-attachments/assets/7e919b4a-c03d-4b23-9f40-3dc661610f7b" />
+
 
 ### CRUD Tabel Kandidat
 #### Tambah Kandidat
